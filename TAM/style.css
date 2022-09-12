@@ -1,0 +1,90 @@
+:root {
+  --white: #fff;
+  --black: #fff;
+  --background: #fff;
+  --primary-color: #fff;
+  --secondary-color: #fff;
+  --warning: #fff;
+  --danger: #fff;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 62.5%; /* define a fonte como 10px*/
+  font-family: "Montserrat", sans-serif; /*fonte do site todo*/
+}
+
+.cabecalho {
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  background-color: aqua;
+}
+
+.navegacao {
+  width: 100%;
+  height: 10vh;
+
+  background-color: green;
+
+  display: flex;
+}
+
+.navegacao__item {
+  width: 100%;
+  height: 100%;
+  list-style: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.navegacao__item:hover {
+  background-color: red;
+}
+
+.navegacao__link {
+  text-decoration: none;
+  color: #000;
+}
+
+.navegacao__link:visited {
+  color: #000;
+}
+
+.titulo-site {
+  background-color: cadetblue;
+  flex-grow: 1;
+}
+
+.principal {
+}
+
+.manutencao-preventiva {
+  background-color: red;
+  min-height: 100vh;
+}
+
+.montagem-pc {
+  background-color: blueviolet;
+  min-height: 100vh;
+}
+
+.montagem-pc {
+  background-color: blue;
+  min-height: 100vh;
+}
