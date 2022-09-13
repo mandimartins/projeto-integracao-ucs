@@ -1,8 +1,8 @@
 :root {
   --white: #fff;
-  --black: #fff;
+  --black: #000;
   --background: #fff;
-  --primary-color: #fff;
+  --primary-color: Yellow;
   --secondary-color: #fff;
   --warning: #fff;
   --danger: #fff;
@@ -17,18 +17,40 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /*deixar a rolagem do site mais suave*/
 }
 
 body {
-  font-size: 62.5%; /* define a fonte como 10px*/
+  font-size: 62.5%; /* definir a fonte como 10px, para trabalhar melhor com a unidade rem*/
   font-family: "Montserrat", sans-serif; /*fonte do site todo*/
 }
 
+/*===============INICIO HEADER===========*/
 .cabecalho {
-  height: 65vh;
+  height: 75vh;
   display: flex;
   flex-direction: column;
+}
+
+.titulo-header {
+  background-color: cadetblue;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.titulo-header h1 {
+  font-size: 6rem;
+  font-weight: 900;
+}
+
+.titulo-header h2 {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-top: -1rem;
 }
 
 .navbar {
@@ -37,8 +59,7 @@ body {
 
 .navegacao {
   width: 100%;
-  height: 10vh;
-
+  height: 15vh;
   background-color: green;
 
   display: flex;
@@ -53,38 +74,90 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .navegacao__item:hover {
   background-color: red;
+  cursor: pointer;
 }
 
 .navegacao__link {
   text-decoration: none;
-  color: #000;
+  color: var(--black);
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 .navegacao__link:visited {
-  color: #000;
+  color: var(--black);
 }
+/*===============FIM HEADER===========*/
 
-.titulo-site {
-  background-color: cadetblue;
-  flex-grow: 1;
-}
-
-.principal {
-}
-
+/*=======INICIO MANUTENCAO=======*/
 .manutencao-preventiva {
-  background-color: red;
-  min-height: 100vh;
+  background-color: crimson;
+  min-height: 120vh;
+
+  display: flex;
+  flex-direction: column;
 }
 
+.manutencao-preventiva-container {
+  flex-grow: 7;
+}
+
+/*=======FIM MANUTENCAO=======*/
+
+/*=======INICIO MONTAGEM PC=======*/
 .montagem-pc {
   background-color: blueviolet;
-  min-height: 100vh;
+  min-height: 120vh;
+
+  display: flex;
+  flex-direction: column;
 }
 
-.montagem-pc {
-  background-color: blue;
-  min-height: 100vh;
+.montagem-pc-container {
+  flex-grow: 7;
+}
+
+/*=======FIM MONTAGEM PC========*/
+
+/*=======INICIO PORTFOLIO=======*/
+
+.portfolio {
+  min-height: 120vh;
+  background-color: yellowgreen;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-container {
+  flex-grow: 7;
+}
+
+/*=======FIM PORTFOLIO=======*/
+
+/*=======INICIO FOOTER=======*/
+
+.footer {
+  height: 30vh;
+  background-color: black;
+}
+
+/*=======FIM FOOTER=======*/
+
+/*============ COMPONENTES============*/
+
+.heading {
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+
+  flex-grow: 2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
