@@ -1,0 +1,400 @@
+:root {
+  --black: #000;
+  --white: #fff;
+  --background: #000;
+
+  --primary: #000;
+  --secondary: #febd69;
+  --tertiary: #000;
+
+  --image-overlay: rgba(255, 255, 255, 0.5);
+  --image-overlay-dark: rgba(0, 0, 0, 0.5);
+  --overlay: rgba(0, 0, 0, 0.8);
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 62.5%;
+  font-family: "Montserrat", sans-serif;
+}
+
+/*=============== INICIO HEADER ==================*/
+.header {
+  height: 90vh;
+
+  background-image: url(./images/header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  background-attachment: fixed;
+
+  background-color: var(--image-overlay);
+  background-blend-mode: lighten;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.header__title {
+  flex-grow: 1;
+}
+
+.navbar {
+  background-color: var(--overlay);
+  height: 5rem;
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100000000000000;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 30%;
+}
+
+.navigation__item {
+  transition: transform ease-out 0.3s;
+}
+
+.navigation__item:hover {
+  transform: skewY(3deg);
+}
+
+.navigation__item:last-child:hover {
+  transform: scale(1.2);
+}
+
+.navigation__link {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.navigation__button {
+  color: var(--black);
+  font-weight: 700;
+  font-size: 1.1rem;
+  background-color: var(--secondary);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.header__title {
+  align-self: center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__title p {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.header__title h1 {
+  font-weight: 900;
+  font-size: 8rem;
+}
+
+.header__title h2 {
+  margin-top: -1.5rem;
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
+}
+
+.button {
+  width: 70%;
+  background-color: var(--secondary);
+  padding: 1rem;
+  font-weight: 900;
+  font-size: 1.2rem;
+
+  cursor: pointer;
+
+  border-radius: 8px;
+  transition: transform ease-out 0.3s;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  box-shadow: 1px 1px 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+/*=============== FIM HEADER ==================*/
+
+/*=============== INICIO FORMATAÇÃO ==================*/
+.formatacao {
+  min-height: 120vh;
+  display: flex;
+}
+
+.formatacao-image__container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formatacao-image {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.formatacao-lista {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.formatacao-lista li {
+  font-size: 1.4rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+}
+/*=============== FIM FORMATAÇÃO ==================*/
+
+/*=================== INICIO MONTAGEM PC ==================*/
+
+.montagem-pc {
+  min-height: 120vh;
+  display: flex;
+  background-color: var(--black);
+}
+
+.montagem-pc-image__container {
+  order: 2;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.montagem-pc-image {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.montagem-pc-lista {
+  order: 1;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.montagem-pc-lista li {
+  font-size: 1.4rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+  color: var(--white);
+}
+/*=============== FIM MONTAGEM PC ==================*/
+
+/*=============== INICIO PAGAMENTO FACILITADO ==================*/
+
+.pagamento-facilitado {
+  height: 120vh;
+  background-color: #09091a;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  flex-flow: wrap;
+}
+
+.card {
+  background-color: var(--white);
+  width: 24rem;
+  height: 24rem;
+
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 8px;
+}
+
+.card__icon {
+  display: flex;
+  justify-content: center;
+
+  padding: 2rem;
+}
+
+.card__icon span {
+  font-size: 5rem;
+}
+
+.card__description {
+  flex-grow: 1;
+  display: flex;
+
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.card__description p {
+  text-align: center;
+}
+
+/*=============== FIM PAGAMENTO FACILITADO ==================*/
+
+.map-responsive {
+  overflow: hidden;
+
+  padding-bottom: 56.25%;
+
+  position: relative;
+
+  height: 0;
+}
+
+.map-responsive iframe {
+  left: 0;
+
+  top: 0;
+
+  height: 100%;
+
+  width: 100%;
+
+  position: absolute;
+}
+
+.portfolio {
+  padding: 2rem;
+  height: 120vh;
+  display: flex;
+  flex-direction: column;
+  flex-flow: wrap;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.trabalho {
+  width: 30%;
+  height: 50%;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.trabalho__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.trabalho-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transform: translateY(100%);
+  transition: transform ease-out 0.5s;
+
+  background-color: rgba(254, 189, 105, 0.5);
+}
+
+.overlay__button {
+  color: var(--white);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  background-color: var(--black);
+  padding: 1rem;
+  border-radius: 8px;
+
+  transition: transform ease-out 0.3s;
+}
+
+.overlay__button:hover {
+  transform: scale(1.1);
+}
+
+.trabalho:hover > .trabalho-overlay {
+  transform: translateY(0);
+}
+
+.footer {
+  height: 40vh;
+  background-color: var(--black);
+}
+
+.whatsapp-button {
+  position: fixed;
+  top: 80%;
+  right: 5%;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+
+  background-image: url(./images/whatsapp_icon-icons.com_65942.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+
+  animation: pulse 1s infinite;
+  z-index: 99999;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  70% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
