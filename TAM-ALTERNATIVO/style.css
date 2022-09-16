@@ -1,11 +1,14 @@
 :root {
   --black: #000;
   --white: #fff;
-  --background: #000;
+  --background: #eaeaea;
+
+  --soft-grey: #dadada;
 
   --primary: #000;
   --secondary: #febd69;
-  --tertiary: #000;
+  --success: green;
+  --danger: crimson;
 
   --image-overlay: rgba(255, 255, 255, 0.5);
   --image-overlay-dark: rgba(0, 0, 0, 0.5);
@@ -41,8 +44,10 @@ body {
   font-size: 62.5%;
   font-family: "Montserrat", sans-serif;
 }
+/*===================== INICIO PAGINA PRINCIPAL =====================*/
 
 /*=============== INICIO HEADER ==================*/
+
 .header {
   height: 90vh;
 
@@ -304,18 +309,31 @@ body {
 
 .portfolio {
   padding: 2rem;
-  height: 120vh;
+  min-height: 140vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.portfolio__title {
+  padding: 2rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.trabalho-container {
+  width: 94%;
+  display: flex;
   flex-flow: wrap;
+  flex-grow: 1;
 
   justify-content: center;
   align-items: center;
 }
 
 .trabalho {
-  width: 30%;
-  height: 50%;
+  width: 25rem;
+  height: 25rem;
 
   position: relative;
   overflow: hidden;
@@ -365,9 +383,17 @@ body {
   transform: translateY(0);
 }
 
-.footer {
-  height: 40vh;
-  background-color: var(--black);
+.made-with {
+  background-color: var(--white);
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.made-with p {
+  text-align: center;
+  font-size: 1.2rem;
 }
 
 .whatsapp-button {
@@ -386,6 +412,236 @@ body {
   animation: pulse 1s infinite;
   z-index: 99999;
 }
+
+/*===================== FIM PAGINA PRINCIPAL =====================*/
+
+/*===================== INICIO PAGINA SOBRE =====================*/
+
+.quem-somos {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background);
+  padding: 2rem;
+}
+
+.sobre {
+  margin-bottom: 3rem;
+}
+
+.sobre h1 {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.sobre p {
+  line-height: 1.5;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.equipe {
+  display: flex;
+}
+
+.equipe-item {
+  min-width: 20rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.equipe__description {
+  width: 20rem;
+}
+
+.equipe__description {
+  margin-top: 1rem;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.rounded-image {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 100%;
+
+  overflow: hidden;
+}
+
+.rounded-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/*===================== FIM PAGINA SOBRE =====================*/
+
+/*===================== INICIO PAGINA PREÇO =====================*/
+
+.precos {
+  min-height: 120vh;
+  background-color: var(--background);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.precos__title {
+  flex-grow: 3;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.precos__title h1 {
+  margin-top: 10rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+
+.precos-container {
+  flex-grow: 6;
+  display: flex;
+  justify-content: space-around;
+
+  padding-top: 5rem;
+}
+
+.precos__card {
+  width: 25rem;
+  height: 35rem;
+  background-color: var(--white);
+  border-radius: 8px;
+
+  overflow: hidden;
+
+  box-shadow: 1px 1px 2px 2px var(--soft-grey);
+
+  transition: all ease-out 0.3s;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.precos__card:hover {
+  box-shadow: 1px 1px 5px 5px var(--soft-grey);
+  transform: scale(1.1);
+}
+
+.precos__card-image-container {
+  width: 100%;
+  height: 40%;
+
+  position: relative;
+}
+
+.precos__card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.precos__card-faixa-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--image-overlay);
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.precos__card-faixa {
+  background-color: var(--secondary);
+  padding: 1rem;
+  border-top-left-radius: 8px;
+  opacity: 0.9;
+}
+
+.precos__card-faixa p {
+  font-weight: 900;
+  color: var(--black);
+  font-size: 1.2rem;
+}
+
+.precos__card-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 3rem;
+}
+
+.preco-antes {
+  text-align: center;
+  font-weight: 900;
+  font-size: 2rem;
+  text-decoration: line-through;
+  text-decoration-color: var(--black);
+  color: var(--danger);
+}
+
+.preco-depois {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--success);
+}
+
+.precos__card-botao {
+  background-color: var(--black);
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--white);
+
+  margin-top: 1rem;
+
+  cursor: pointer;
+
+  transition: transform ease-out 0.5s;
+}
+
+.precos__card-botao:hover {
+  transform: scale(1.1);
+}
+
+.metodo-pagamento img {
+  width: 3rem;
+  margin: 0.5rem;
+}
+
+.footer {
+  height: 40vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.inner-footer {
+  flex-grow: 6;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/*===================== FIM PAGINA PREÇO =====================*/
 
 @keyframes pulse {
   0% {
